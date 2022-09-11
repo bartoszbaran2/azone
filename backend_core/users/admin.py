@@ -10,4 +10,3 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(models.CustomUser, CustomUserAdmin)
-

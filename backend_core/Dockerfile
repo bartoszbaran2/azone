@@ -15,10 +15,12 @@ COPY Pipfile Pipfile.lock ./
 RUN pip install -U pipenv
 RUN pipenv install --system
 
+# kod do wykonania skryptu entrypoint
 COPY ./entrypoint.sh .
-RUN +x ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 
 COPY . .
+
 
 ENTRYPOINT ["./entrypoint.sh"]
 
